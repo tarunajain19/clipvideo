@@ -110,8 +110,9 @@ def merge_audio(folder, output_filename):
 
 
 def send_email(to, audio_filename):
-    from_email = "bhavgoyal105020@gmail.com"
-    from_password = "wpggwxconjwezqbr"
+
+    from_email = "sanjoliagarwal123@gmail.com"
+    from_password = "pass"
     subject = "Audio file"
     message = "Attached is the audio file."
 
@@ -165,9 +166,10 @@ def main():
         if output_name:
             send_email(to, output_name)
             st.success("Audio file sent to your email address successfully")
-            exit(0)
+            # return 0
+            exit(1)
         else:
             st.error("No audio file found for the singer")
- 
+
 if __name__ == "__main__":
     main()
